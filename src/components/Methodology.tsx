@@ -43,11 +43,14 @@ const Methodology: React.FC = () => {
           </div>
 
           {/* CTA CENTRADO + ENLACE */}
-          <div className="text-center">
+          <div className="text-center mt-10">
             <Button
-              onClick={() => window.open(CHECKOUT_URL, "_blank")}
+              pulse
+              href="https://go.hotmart.com/R101103337F?ap=50eb"
+              external
+              className="mx-auto text-lg py-4"
             >
-              Quiero Comenzar los 21 Días
+              Quiero comenzar mi ritual de 21 días
             </Button>
           </div>
         </div>
