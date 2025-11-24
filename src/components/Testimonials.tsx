@@ -55,7 +55,6 @@ const Testimonials: React.FC = () => {
           href="https://go.hotmart.com/R101103337F?ap=50eb"
           size="lg"
           pulse
-          className="inline-block w-auto mx-auto text-lg px-10 py-4"
         >
           QUIERO MI RITUAL DE TRANSFORMACIÓN
         </Button>
