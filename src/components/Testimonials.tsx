@@ -1,5 +1,6 @@
 import React from 'react';
 import { IMAGES } from '../constants';
+import Button from './Button';
 
 const Testimonials: React.FC = () => {
   return (
@@ -27,11 +28,11 @@ const Testimonials: React.FC = () => {
                 alt={`Testimonio ${index + 1}`}
                 className="
                   rounded-lg
-                  max-w-[180px]     /* ancho máximo */
-                  max-h-[260px]     /* alto máximo */
+                  max-w-[180px]
+                  max-h-[260px]
                   w-auto 
                   h-auto 
-                  object-contain    /* conserva proporciones sin recortar */
+                  object-contain
                   mx-auto
                   transition-transform duration-500
                   hover:scale-105
@@ -42,6 +43,21 @@ const Testimonials: React.FC = () => {
           ))}
 
         </div>
+      </div>
+
+      {/* CTA FINAL */}
+      <div className="container mx-auto px-6 text-center mt-16">
+        <p className="text-lg text-stone-700 mb-6 max-w-2xl mx-auto">
+          Tú también puedes vivir esta transformación. Da el primer paso hacia la vida que mereces.
+        </p>
+
+        <Button
+          href="https://go.hotmart.com/R101103337F?ap=50eb"
+          size="lg"
+          pulse
+        >
+          QUIERO MI RITUAL DE TRANSFORMACIÓN
+        </Button>
       </div>
     </section>
   );
