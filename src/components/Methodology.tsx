@@ -43,15 +43,17 @@ const Methodology: React.FC = () => {
           </div>
 
           {/* CTA CENTRADO + ENLACE */}
-          <div className="text-center mt-10">
-            <Button
-              pulse
-              href="https://go.hotmart.com/R101103337F?ap=50eb"
-              external
-              className="mx-auto text-lg py-4"
-            >
-              Quiero comenzar mi ritual de 21 días
-            </Button>
+          <div className="flex justify-center mt-10">
+            <div className="inline-block">
+              <Button
+                pulse
+                href="https://go.hotmart.com/R101103337F?ap=50eb"
+                external
+                className="text-lg py-4 px-10 w-auto !max-w-fit !w-auto mx-auto"
+              >
+                QUIERO COMENZAR MI RITUAL DE 21 DÍAS
+              </Button>
+            </div>
           </div>
         </div>
       </section>
