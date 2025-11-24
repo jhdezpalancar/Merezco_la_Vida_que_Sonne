@@ -18,15 +18,23 @@ const Testimonials: React.FC = () => {
           {IMAGES.testimonials.map((src, index) => (
             <div
               key={index}
-              className={`
-                relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300
-                ${index % 3 === 0 ? 'md:row-span-2' : 'md:row-span-1'}
-              `}
+              className="
+                relative overflow-hidden rounded-xl shadow-md hover:shadow-xl 
+                transition-shadow duration-300
+                bg-white
+              "
+              style={{
+                maxHeight: "260px",      // 🔥 Altura máxima controlada
+                aspectRatio: "1 / 1",     // 🔥 Mantiene forma cuadrada sin deformar imágenes
+              }}
             >
               <img
                 src={src}
                 alt={`Testimonio ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="
+                  w-full h-full object-cover 
+                  hover:scale-105 transition-transform duration-500
+                "
                 loading="lazy"
               />
             </div>
@@ -37,7 +45,8 @@ const Testimonials: React.FC = () => {
       {/* CTA Final */}
       <div className="container mx-auto px-6 text-center mt-12">
         <p className="text-lg text-stone-700 mb-6 max-w-2xl mx-auto">
-          Tú también puedes vivir esta transformación. Da el primer paso hacia la vida que mereces.
+          Tú también puedes vivir esta transformación.  
+          Da el primer paso hacia la vida que mereces.
         </p>
 
         <div className="flex justify-center">
