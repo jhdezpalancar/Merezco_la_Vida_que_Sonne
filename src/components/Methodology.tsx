@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './Button';
 import { Heart, Sun, Brain, Feather, Star } from 'lucide-react';
 
+const CHECKOUT_URL = "https://go.hotmart.com/R101103337F?ap=50eb";
+
 const Methodology: React.FC = () => {
   return (
     <>
@@ -11,8 +13,12 @@ const Methodology: React.FC = () => {
         
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">¿En qué consiste el Ritual?</h2>
-            <p className="text-lg text-stone-600">Un camino de 21 días diseñado para reconectar con tu esencia.</p>
+            <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+              ¿En qué consiste el Ritual?
+            </h2>
+            <p className="text-lg text-stone-600">
+              Un camino de 21 días diseñado para reconectar con tu esencia.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
@@ -21,18 +27,28 @@ const Methodology: React.FC = () => {
               { icon: Heart, title: "Conexión Emocional", desc: "Alinea lo que sientes con lo que deseas atraer a tu vida." },
               { icon: Feather, title: "Acción Guiada", desc: "Pequeños pasos que crean grandes transformaciones." }
             ].map((item, idx) => (
-              <div key={idx} className="text-center p-8 rounded-2xl bg-stone-50 border border-stone-100 hover:border-gold-200 transition-colors">
+              <div
+                key={idx}
+                className="text-center p-8 rounded-2xl bg-stone-50 border border-stone-100 hover:border-gold-200 transition-colors"
+              >
                 <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-gold-500">
                   <item.icon className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-3 text-stone-800">{item.title}</h3>
+                <h3 className="font-serif text-xl font-bold mb-3 text-stone-800">
+                  {item.title}
+                </h3>
                 <p className="text-stone-600">{item.desc}</p>
               </div>
             ))}
           </div>
 
+          {/* CTA CENTRADO + ENLACE */}
           <div className="text-center">
-            <Button>Quiero Comenzar los 21 Días</Button>
+            <Button
+              onClick={() => window.open(CHECKOUT_URL, "_blank")}
+            >
+              Quiero Comenzar los 21 Días
+            </Button>
           </div>
         </div>
       </section>
@@ -63,7 +79,8 @@ const Methodology: React.FC = () => {
               <Brain className="w-12 h-12 text-gold-400 mb-6" />
               <h3 className="font-serif text-2xl mb-4 text-white">Reprogramación Suave</h3>
               <p className="text-stone-400 leading-relaxed">
-                A diferencia de métodos agresivos, este ritual trabaja con la plasticidad de tu mente a través de la repetición consciente y la emoción elevada durante 21 días consecutivos.
+                Este ritual trabaja con la plasticidad de tu mente a través de repetición consciente y emoción elevada durante 21 días.  
+                Una transformación amable, profunda y totalmente guiada.
               </p>
             </div>
           </div>
@@ -74,17 +91,21 @@ const Methodology: React.FC = () => {
       <section className="py-24 bg-gold-50/30">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <div className="mb-8 flex justify-center">
-             <div className="w-20 h-20 rounded-full bg-gold-200 flex items-center justify-center opacity-80">
-                <span className="font-serif text-4xl text-gold-700">A</span>
-             </div>
+            <div className="w-20 h-20 rounded-full bg-gold-200 flex items-center justify-center opacity-80">
+              <span className="font-serif text-4xl text-gold-700">A</span>
+            </div>
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">El Legado de La Abu</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">
+            El Legado de La Abu
+          </h2>
           <div className="space-y-6 text-lg md:text-xl text-stone-700 leading-relaxed font-light">
             <p>
-              “Este ritual nació hace generaciones. <strong className="font-serif text-gold-700">La Abu</strong>, una mujer sabia y amorosa, creó este método para guiar a quienes buscaban claridad y propósito.”
+              “Este ritual nació hace generaciones. <strong className="font-serif text-gold-700">La Abu</strong>,
+              una mujer sabia y amorosa, creó este método para guiar a quienes buscaban claridad y propósito.”
             </p>
             <p>
-              “Lo transmitió como un legado de transformación profunda. Hoy, esa sabiduría llega hasta ti tal como ella la enseñó: simple, humana y llena de amor.”
+              “Lo transmitió como un legado de transformación profunda. Hoy, esa sabiduría llega hasta ti tal como ella la enseñó:
+              simple, humana y llena de amor.”
             </p>
           </div>
         </div>
