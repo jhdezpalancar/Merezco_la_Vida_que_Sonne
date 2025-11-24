@@ -5,7 +5,7 @@ import Methodology from './components/Methodology';
 import ProductDetails from './components/ProductDetails';
 import Testimonials from './components/Testimonials';
 import Offer from './components/Offer';
-import Button from './components/Button';   // ← FALTABA ESTO
+import Button from './components/Button';
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
       <Offer />
 
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 w-full p-4 bg-white/90 backdrop-blur-md border-t border-stone-200 shadow-lg md:hidden z-50">  
+      <div className="fixed bottom-0 left-0 w-full p-4 bg-white/90 backdrop-blur-md 
+                      border-t border-stone-200 shadow-lg md:hidden z-50">
         <div className="flex justify-center w-full">
           <Button
             href="https://go.hotmart.com/R101103337F?ap=50eb"
@@ -29,4 +30,11 @@ function App() {
           >
             QUIERO EMPEZAR (SOLO $14)
           </Button>
-        </d
+        </div>
+      </div>
+
+    </main>
+  );
+}
+
+export default App;
