@@ -1,104 +1,78 @@
-import React from 'react';
-import { IMAGES } from '../constants';
-import Button from './Button';
-import { CheckCircle2 } from 'lucide-react';
+import { BookOpen } from "lucide-react";
+import { IMAGES } from "../constants";
+import Button from "./Button";
 
-const ProductDetails: React.FC = () => {
+export default function ProductDetails() {
   return (
-    <>
-      {/* SECCIÓN 7: QUÉ INCLUYE */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            {/* Image */}
-            <div className="w-full lg:w-1/2">
-              <img 
-                src={IMAGES.bookCover} 
-                alt="Libro Merezco la vida de mis sueños" 
-                className="w-full h-auto rounded-xl shadow-2xl"
-              />
-            </div>
-            
-            {/* List */}
-            <div className="w-full lg:w-1/2">
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">
-                ¿Qué descubrirás en estas páginas?
-              </h2>
-              <ul className="space-y-4">
-                {[
-                  "Cómo alinearte energéticamente en solo 10 minutos al día.",
-                  "Técnicas para reprogramar creencias limitantes sin lucha.",
-                  "Cómo manifestar desde la claridad y no desde la carencia.",
-                  "Secretos para elevar tu frecuencia emocional al instante.",
-                  "Pasos para romper ciclos negativos generacionales.",
-                  "Ejercicios prácticos guiados para los 21 días.",
-                  "Visualizaciones fáciles para quienes 'no saben imaginar'."
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-gold-500 shrink-0 mt-0.5" />
-                    <span className="text-stone-700 text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <section className="max-w-4xl mx-auto px-6 py-16 text-center">
+      <div className="flex justify-center mb-6">
+        <BookOpen className="w-12 h-12 text-indigo-500" />
+      </div>
+
+      <h2 className="text-3xl font-bold mb-4">
+        ¿Qué Obtienes Dentro del Ritual de la Abu?
+      </h2>
+
+      <p className="text-gray-300 leading-relaxed mb-12">
+        Basado en enseñanza espiritual de Melissa Escobar, este ritual te guía paso a paso durante 21 días para transformar tu energía y manifestar una vida de abundancia, claridad y fe.
+      </p>
+
+      {/* Imagen principal del libro */}
+      <img
+        src={IMAGES.book}
+        alt="Libro Merezco la Vida de Mis Sueños"
+        className="w-full max-w-[300px] mx-auto rounded-lg shadow-lg mb-12"
+      />
+
+      {/* BONOS */}
+      <h3 className="text-2xl font-semibold mb-6">🎁 Tus 3 Bonos Incluidos</h3>
+
+      <div className="grid md:grid-cols-3 gap-10">
+
+        {/* BONO 1 */}
+        <div className="text-center">
+          <span className="block text-indigo-400 font-bold mb-2">REGALO #1</span>
+          <img
+            src={IMAGES.bonuses.one}
+            alt="Bono 1"
+            className="w-full max-w-[220px] mx-auto rounded-lg shadow-md object-cover mb-4"
+          />
+          <p className="font-semibold">Mi Diario de Manifestación</p>
         </div>
-      </section>
 
-      {/* SECCIÓN 8: BONOS */}
-      <section className="py-24 bg-stone-50">
-        <div className="container mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-5xl text-center text-stone-900 mb-4">
-            Regalos Exclusivos
-          </h2>
-          <p className="text-center text-stone-600 mb-16 max-w-2xl mx-auto">
-            Herramientas adicionales diseñadas para potenciar tus resultados durante y después de los 21 días.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
-            {/* Bono 1 */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-gold-400 hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-6 overflow-hidden rounded-lg bg-stone-100 aspect-[4/3]">
-                <img src={IMAGES.bonuses.one} alt="Bono 1" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-gold-600 font-bold tracking-wider text-xs uppercase mb-2 block">Bono #1</span>
-              <h3 className="font-serif text-2xl font-bold mb-3">Mi Diario de Manifestación</h3>
-              <p className="text-stone-600 text-sm">El compañero perfecto para registrar tus avances, señales y victorias diarias.</p>
-            </div>
-
-            {/* Bono 2 */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-gold-400 hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-6 overflow-hidden rounded-lg bg-stone-100 aspect-[4/3]">
-                <img src={IMAGES.bonuses.two} alt="Bono 2" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-gold-600 font-bold tracking-wider text-xs uppercase mb-2 block">Bono #2</span>
-              <h3 className="font-serif text-2xl font-bold mb-3">Secretos de los Sonidos Mágicos</h3>
-              <p className="text-stone-600 text-sm">Frecuencias y audios para sintonizar tu mente con la abundancia mientras duermes.</p>
-            </div>
-
-            {/* Bono 3 */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-gold-400 hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-6 overflow-hidden rounded-lg bg-stone-100 aspect-[4/3]">
-                <img src={IMAGES.bonuses.three} alt="Bono 3" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-gold-600 font-bold tracking-wider text-xs uppercase mb-2 block">Bono #3</span>
-              <h3 className="font-serif text-2xl font-bold mb-3">Números Mágicos para una Vida Abundante</h3>
-              <p className="text-stone-600 text-sm">La guía de numerología sagrada aplicada a tu prosperidad diaria.</p>
-            </div>
-          </div>
-
-          {/* Banner */}
-          <div className="max-w-4xl mx-auto mb-16 shadow-2xl rounded-xl overflow-hidden">
-            <img src={IMAGES.banner} alt="Colección completa" className="w-full h-auto" />
-          </div>
-
-          <div className="text-center">
-            <Button pulse>Quiero Obtener el Libro y los 3 Bonos</Button>
-          </div>
+        {/* BONO 2 */}
+        <div className="text-center">
+          <span className="block text-indigo-400 font-bold mb-2">REGALO #2</span>
+          <img
+            src={IMAGES.bonuses.two}
+            alt="Bono 2"
+            className="w-full max-w-[220px] mx-auto rounded-lg shadow-md object-cover mb-4"
+          />
+          <p className="font-semibold">Los Secretos de los Sonidos Mágicos</p>
         </div>
-      </section>
-    </>
+
+        {/* BONO 3 */}
+        <div className="text-center">
+          <span className="block text-indigo-400 font-bold mb-2">REGALO #3</span>
+          <img
+            src={IMAGES.bonuses.three}
+            alt="Bono 3"
+            className="w-full max-w-[220px] mx-auto rounded-lg shadow-md object-cover mb-4"
+          />
+          <p className="font-semibold">Números Mágicos para una Vida Abundante</p>
+        </div>
+
+      </div>
+
+      {/* CTA PRINCIPAL */}
+      <div className="mt-12">
+        <Button
+          pulse
+          href="https://go.hotmart.com/R101103337F?ap=50eb"
+        >
+          Quiero Obtener el Libro y los 3 Bonos
+        </Button>
+      </div>
+    </section>
   );
-};
-
-export default ProductDetails;
+}
