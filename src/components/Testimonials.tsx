@@ -53,6 +53,7 @@ const Testimonials: React.FC = () => {
 
         <Button
           href="https://go.hotmart.com/R101103337F?ap=50eb"
+          external
           size="lg"
           pulse
         >
