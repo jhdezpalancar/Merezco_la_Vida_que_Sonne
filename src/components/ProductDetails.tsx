@@ -69,6 +69,7 @@ export default function ProductDetails() {
         <Button
           pulse
           href="https://go.hotmart.com/R101103337F?ap=50eb"
+          external
         >
           Quiero Obtener el Libro y los 3 Bonos
         </Button>
