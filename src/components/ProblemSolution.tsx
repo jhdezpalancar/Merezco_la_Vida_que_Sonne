@@ -26,11 +26,19 @@ const ProblemSolution: React.FC = () => {
             ))}
           </div>
 
+          {/* CTA CENTRADO + ENLACE CORRECTO */}
           <div className="text-center space-y-8">
             <p className="text-xl md:text-2xl font-serif italic text-stone-700">
               “Nada de esto es tu culpa. Solo necesitas una guía clara para realinear tu energía y tus acciones.”
             </p>
-            <Button>Empezar Mi Cambio Hoy</Button>
+
+            <Button 
+              pulse 
+              href="https://go.hotmart.com/R101103337F?ap=50eb"
+              external
+            >
+              Empezar Mi Cambio Hoy
+            </Button>
           </div>
         </div>
       </section>
