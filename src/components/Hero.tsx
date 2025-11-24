@@ -1,45 +1,62 @@
 import React from 'react';
 import { IMAGES } from '../constants';
 import Button from './Button';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Shield, Heart } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white pt-12 pb-20 lg:pt-0">
+    <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white pt-12 pb-24 lg:pt-0">
+
+      {/* DECORACIÓN */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gold-50/50 rounded-bl-[100px] -z-10" />
-      
-      <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Content */}
+
+      {/* CONTENIDO PRINCIPAL */}
+      <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        {/* LEFT CONTENT */}
         <div className="flex flex-col space-y-8 text-center lg:text-left order-2 lg:order-1">
+
+          {/* BADGE */}
           <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-gold-600 font-medium tracking-wider text-sm uppercase">
             <Sparkles className="w-4 h-4" />
             <span>Manifestación Consciente</span>
           </div>
-          
+
+          {/* TITLE */}
           <h1 className="font-serif text-4xl lg:text-6xl text-stone-900 leading-[1.1]">
-            Descubre el Ritual de Manifestación que transforma tu vida en solo <span className="text-gold-500 italic">21 días</span>
+            Descubre el Ritual de Manifestación que transforma tu vida en solo{' '}
+            <span className="text-gold-500 italic">21 días</span>
           </h1>
-          
+
+          {/* DESCRIPTION */}
           <p className="font-sans text-lg lg:text-xl text-stone-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Un método simple, probado y profundo. No necesitas experiencia previa para conectar con la abundancia que mereces.
+            Un método simple, probado y profundo. No necesitas experiencia previa
+            para conectar con la abundancia que mereces.
           </p>
-          
+
+          {/* CTA SUPERIOR */}
           <div className="pt-4 flex justify-center lg:justify-start">
-            <Button pulse>Quiero Transformar Mi Vida Ahora</Button>
+            <Button
+              pulse
+              href="https://go.hotmart.com/R101103337F?ap=50eb"
+              external
+            >
+              Quiero Transformar Mi Vida Ahora
+            </Button>
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* RIGHT IMAGE */}
         <div className="relative order-1 lg:order-2 flex justify-center">
           <div className="relative w-3/4 lg:w-full max-w-md">
             <div className="absolute inset-0 bg-gold-200 blur-[60px] opacity-40 rounded-full" />
-            <img 
-              src={IMAGES.bookCover} 
-              alt="Merezco la vida de mis sueños Libro" 
+            <img
+              src={IMAGES.bookCover}
+              alt="Merezco la vida de mis sueños Libro"
               className="relative z-10 w-full h-auto rounded-lg shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
             />
-            {/* Badge */}
+
+            {/* 21 DÍAS BADGE */}
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-full shadow-lg z-20 hidden lg:block">
               <div className="text-center">
                 <p className="text-gold-600 font-bold text-xl font-serif">21</p>
@@ -48,7 +65,44 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
+      {/* SECCIÓN DE GARANTÍA + CTA FINAL */}
+      <div className="container mx-auto px-6 lg:px-12 mt-20 max-w-3xl text-center">
+
+        {/* ICON */}
+        <div className="flex justify-center mb-4">
+          <Shield className="w-10 h-10 text-gold-600" />
+        </div>
+
+        {/* GARANTÍA */}
+        <p className="text-lg text-stone-700 leading-relaxed mb-2">
+          Tienes <strong>7 días completos</strong> para explorar el ritual y sentir su energía.
+        </p>
+
+        <p className="text-stone-600 text-base italic max-w-xl mx-auto mb-10">
+          Si por alguna razón no conectas, te devolvemos tu inversión sin preguntas.
+          Tu tranquilidad también es parte del camino.
+        </p>
+
+        {/* MENSAJE DE LA ABU */}
+        <div className="flex flex-col items-center mb-8">
+          <Heart className="w-7 h-7 text-red-400 mb-3" />
+          <p className="text-stone-600 italic">
+            La Abu te acompaña en cada paso.  
+            Confía en tu proceso… ya estás despertando.
+          </p>
+        </div>
+
+        {/* CTA FINAL */}
+        <Button
+          pulse
+          href="https://go.hotmart.com/R101103337F?ap=50eb"
+          external
+          className="text-lg py-5"
+        >
+          Comenzar Mi Transformación Hoy
+        </Button>
       </div>
     </section>
   );
