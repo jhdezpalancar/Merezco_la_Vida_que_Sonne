@@ -19,8 +19,11 @@ function App() {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 w-full p-4 bg-white/90 backdrop-blur-md border-t border-stone-200 shadow-lg md:hidden z-50">
         <button 
-          onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
-          className="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-3 rounded-full shadow-md"
+    		  href="https://go.hotmart.com/R101103337F?ap=50eb"
+    		  external
+    		  pulse
+    		  fullWidth
+    		  className="py-4 text-base font-semibold"
         >
           Quiero Empezar (Solo $14)
         </button>
